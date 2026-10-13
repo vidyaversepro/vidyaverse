@@ -70,7 +70,7 @@
         "pdf-lib": "^1.17.1",
         "pino": "^8.19.0",
         "pino-pretty": "^10.3.1",
-        "puppeteer": "^22.4.0",
+        "puppeteer": "^25.8.0",
         "qrcode": "^1.5.3",
         "sharp": "^0.33.2",
         "speakeasy": "^2.0.0",
