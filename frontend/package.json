@@ -74,7 +74,7 @@
         "tailwind-merge": "^2.2.1",
         "use-debounce": "^10.1.1",
         "use-image": "^1.1.4",
-        "zod": "^3.22.4",
+        "zod": "^4.4.3",
         "zustand": "^4.5.2"
     },
     "devDependencies": {
