@@ -116,7 +116,7 @@ jobs:
           FRONTEND_URL: http://localhost:5173
 
       - name: Upload Test Report
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-report
@@ -124,7 +124,7 @@ jobs:
           retention-days: 7
 
       - name: Upload Test Screenshots
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         if: failure()
         with:
           name: playwright-screenshots
