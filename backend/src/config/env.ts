@@ -53,6 +53,10 @@ const envSchema = z.object({
      *  per-user resource, so it is not gated behind an OIDC access token like
      *  capabilities is. */
     TAXONOMY_SERVICE_API_KEY: z.string().optional(),
+    /** Curriculum v2: load the vendored edu-taxonomy release (Book Buddy's taxonomy) into
+     *  taxonomy.node and serve it at /api/v1/curriculum/*. Off until
+     *  prisma/taxonomy/migrations/001_curriculum_v2.sql has been applied. */
+    TAXONOMY_V2_ENABLED: z.string().transform((v) => v === 'true').default('false'),
 
     // Email
     // Resend is the preferred transport — it reports bounces and complaints, which

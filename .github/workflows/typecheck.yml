@@ -40,6 +40,17 @@ on:
 jobs:
   typecheck:
     runs-on: ubuntu-latest
+    # Throwaway Postgres for the curriculum loader test (src/modules/curriculum/__tests__/loader.db.test.ts),
+    # which wipes and re-creates its `taxonomy` schema. Nothing else in the unit suite touches it.
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_PASSWORD: test
+          POSTGRES_DB: trio
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd "pg_isready -U postgres" --health-interval 5s --health-timeout 5s --health-retries 10
     steps:
       - uses: actions/checkout@v4
 
@@ -94,6 +105,8 @@ jobs:
 
       - name: Test backend (unit)
         run: pnpm --filter @vidyaverse/backend run test:unit
+        env:
+          CURRICULUM_TEST_DATABASE_URL: postgresql://postgres:test@localhost:5432/trio?schema=taxonomy
 
       - name: Test frontend
         run: pnpm --filter @vidyaverse/frontend run test

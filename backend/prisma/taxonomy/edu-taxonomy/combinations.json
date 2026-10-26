@@ -1,0 +1,3051 @@
+{
+ "schema_version": "1.0.0",
+ "rule": "compulsory and choose[].from hold subject SEGMENTS; each must exist as a SUBJECT under every class in class_codes",
+ "combinations": [
+  {
+   "code": "CBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE",
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "INFORMATICS_PRACTICES",
+      "PHYSICAL_EDUCATION",
+      "ECONOMICS",
+      "HINDI_CORE",
+      "ENGINEERING_GRAPHICS",
+      "ARTIFICIAL_INTELLIGENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "CBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE",
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "APPLIED_MATHEMATICS",
+      "PSYCHOLOGY",
+      "PHYSICAL_EDUCATION",
+      "BIOTECHNOLOGY",
+      "HINDI_CORE",
+      "COMPUTER_SCIENCE",
+      "INFORMATICS_PRACTICES",
+      "HOME_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "CBSE_SCI_PCMB",
+   "name": "Science (PCMB)",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE",
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "PHYSICAL_EDUCATION",
+      "HINDI_CORE",
+      "BIOTECHNOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "CBSE_COM_MATH",
+   "name": "Commerce with Mathematics",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE",
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "APPLIED_MATHEMATICS"
+     ]
+    },
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "INFORMATICS_PRACTICES",
+      "ENTREPRENEURSHIP",
+      "PHYSICAL_EDUCATION",
+      "HINDI_CORE"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "CBSE_COM",
+   "name": "Commerce without Mathematics",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE",
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 1,
+     "from": [
+      "INFORMATICS_PRACTICES",
+      "ENTREPRENEURSHIP",
+      "PHYSICAL_EDUCATION",
+      "HINDI_CORE",
+      "LEGAL_STUDIES",
+      "PSYCHOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "CBSE_HUM",
+   "name": "Humanities",
+   "class_codes": [
+    "SCH.CBSE.C11",
+    "SCH.CBSE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH_CORE"
+   ],
+   "choose": [
+    {
+     "min": 4,
+     "max": 5,
+     "from": [
+      "HISTORY",
+      "POLITICAL_SCIENCE",
+      "GEOGRAPHY",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HINDI_ELECTIVE",
+      "ENGLISH_ELECTIVE",
+      "SANSKRIT_CORE",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION",
+      "PAINTING",
+      "HINDUSTANI_MUSIC_VOCAL",
+      "LEGAL_STUDIES",
+      "APPLIED_MATHEMATICS",
+      "MATHEMATICS",
+      "KNOWLEDGE_TRADITION_AND_PRACTICES_OF_INDIA",
+      "INFORMATICS_PRACTICES"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "ISC_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.CISCE.C11",
+    "SCH.CISCE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH",
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 2,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY",
+      "PHYSICAL_EDUCATION",
+      "ECONOMICS",
+      "HINDI"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "ISC_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.CISCE.C11",
+    "SCH.CISCE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH",
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 2,
+     "from": [
+      "MATHEMATICS",
+      "BIOTECHNOLOGY",
+      "PSYCHOLOGY",
+      "PHYSICAL_EDUCATION",
+      "HINDI"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "ISC_COM",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.CISCE.C11",
+    "SCH.CISCE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH",
+    "ACCOUNTS",
+    "COMMERCE",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 1,
+     "max": 2,
+     "from": [
+      "MATHEMATICS",
+      "BUSINESS_STUDIES",
+      "COMPUTER_SCIENCE",
+      "PHYSICAL_EDUCATION",
+      "HINDI"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "ISC_HUM",
+   "name": "Humanities",
+   "class_codes": [
+    "SCH.CISCE.C11",
+    "SCH.CISCE.C12"
+   ],
+   "compulsory": [
+    "ENGLISH"
+   ],
+   "choose": [
+    {
+     "min": 3,
+     "max": 5,
+     "from": [
+      "HISTORY",
+      "POLITICAL_SCIENCE",
+      "GEOGRAPHY",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "ECONOMICS",
+      "HINDI",
+      "ELECTIVE_ENGLISH",
+      "LEGAL_STUDIES",
+      "ART",
+      "MASS_MEDIA_AND_COMMUNICATION",
+      "HOME_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance"
+  },
+  {
+   "code": "UP_BOARD_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.UP_BOARD.C11",
+    "SCH.UP_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UP_BOARD_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.UP_BOARD.C11",
+    "SCH.UP_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UP_BOARD_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.UP_BOARD.C11",
+    "SCH.UP_BOARD.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UP_BOARD_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.UP_BOARD.C11",
+    "SCH.UP_BOARD.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "BSEB_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.BSEB.C11",
+    "SCH.BSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "BSEB_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.BSEB.C11",
+    "SCH.BSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "BSEB_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.BSEB.C11",
+    "SCH.BSEB.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "BSEB_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.BSEB.C11",
+    "SCH.BSEB.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MPBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.MPBSE.C11",
+    "SCH.MPBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MPBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.MPBSE.C11",
+    "SCH.MPBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MPBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.MPBSE.C11",
+    "SCH.MPBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MPBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.MPBSE.C11",
+    "SCH.MPBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "RBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.RBSE.C11",
+    "SCH.RBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "RBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.RBSE.C11",
+    "SCH.RBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "RBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.RBSE.C11",
+    "SCH.RBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "RBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.RBSE.C11",
+    "SCH.RBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "CGBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.CGBSE.C11",
+    "SCH.CGBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "CGBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.CGBSE.C11",
+    "SCH.CGBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "CGBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.CGBSE.C11",
+    "SCH.CGBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "CGBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.CGBSE.C11",
+    "SCH.CGBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JAC_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.JAC.C11",
+    "SCH.JAC.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JAC_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.JAC.C11",
+    "SCH.JAC.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JAC_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.JAC.C11",
+    "SCH.JAC.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JAC_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.JAC.C11",
+    "SCH.JAC.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.HBSE.C11",
+    "SCH.HBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.HBSE.C11",
+    "SCH.HBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.HBSE.C11",
+    "SCH.HBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.HBSE.C11",
+    "SCH.HBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HPBOSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.HPBOSE.C11",
+    "SCH.HPBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HPBOSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.HPBOSE.C11",
+    "SCH.HPBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HPBOSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.HPBOSE.C11",
+    "SCH.HPBOSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "HPBOSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.HPBOSE.C11",
+    "SCH.HPBOSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.UBSE.C11",
+    "SCH.UBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.UBSE.C11",
+    "SCH.UBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.UBSE.C11",
+    "SCH.UBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "UBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.UBSE.C11",
+    "SCH.UBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "PSEB_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.PSEB.C11",
+    "SCH.PSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "PSEB_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.PSEB.C11",
+    "SCH.PSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "PSEB_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.PSEB.C11",
+    "SCH.PSEB.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "PSEB_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.PSEB.C11",
+    "SCH.PSEB.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GSEB_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.GSEB.C11",
+    "SCH.GSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GSEB_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.GSEB.C11",
+    "SCH.GSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GSEB_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.GSEB.C11",
+    "SCH.GSEB.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GSEB_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.GSEB.C11",
+    "SCH.GSEB.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MSBSHSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.MSBSHSE.C11",
+    "SCH.MSBSHSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MSBSHSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.MSBSHSE.C11",
+    "SCH.MSBSHSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MSBSHSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.MSBSHSE.C11",
+    "SCH.MSBSHSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MSBSHSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.MSBSHSE.C11",
+    "SCH.MSBSHSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GBSHSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.GBSHSE.C11",
+    "SCH.GBSHSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GBSHSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.GBSHSE.C11",
+    "SCH.GBSHSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GBSHSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.GBSHSE.C11",
+    "SCH.GBSHSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "GBSHSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.GBSHSE.C11",
+    "SCH.GBSHSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_PCMB",
+   "name": "PCMB",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS",
+    "BIOLOGY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_PCMC",
+   "name": "PCMC",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS",
+    "COMPUTER_SCIENCE"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_PCME",
+   "name": "PCME",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS",
+    "ELECTRONICS"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_SEBA",
+   "name": "SEBA",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "STATISTICS",
+    "ECONOMICS",
+    "BUSINESS_STUDIES",
+    "ACCOUNTANCY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_CEBA",
+   "name": "CEBA",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "COMPUTER_SCIENCE",
+    "ECONOMICS",
+    "BUSINESS_STUDIES",
+    "ACCOUNTANCY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KSEAB_HEPS",
+   "name": "HEPS",
+   "class_codes": [
+    "SCH.KSEAB.C11",
+    "SCH.KSEAB.C12"
+   ],
+   "compulsory": [
+    "HISTORY",
+    "ECONOMICS",
+    "POLITICAL_SCIENCE",
+    "SOCIOLOGY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KERALA_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.KERALA.C11",
+    "SCH.KERALA.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KERALA_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.KERALA.C11",
+    "SCH.KERALA.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KERALA_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.KERALA.C11",
+    "SCH.KERALA.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "KERALA_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.KERALA.C11",
+    "SCH.KERALA.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TN_DGE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.TN_DGE.C11",
+    "SCH.TN_DGE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TN_DGE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.TN_DGE.C11",
+    "SCH.TN_DGE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TN_DGE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.TN_DGE.C11",
+    "SCH.TN_DGE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TN_DGE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.TN_DGE.C11",
+    "SCH.TN_DGE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "AP_BOARD_MPC",
+   "name": "MPC",
+   "class_codes": [
+    "SCH.AP_BOARD.C11",
+    "SCH.AP_BOARD.C12"
+   ],
+   "compulsory": [
+    "MATHEMATICS",
+    "PHYSICS",
+    "CHEMISTRY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "AP_BOARD_BIPC",
+   "name": "BiPC",
+   "class_codes": [
+    "SCH.AP_BOARD.C11",
+    "SCH.AP_BOARD.C12"
+   ],
+   "compulsory": [
+    "BOTANY",
+    "ZOOLOGY",
+    "PHYSICS",
+    "CHEMISTRY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "AP_BOARD_CEC",
+   "name": "CEC",
+   "class_codes": [
+    "SCH.AP_BOARD.C11",
+    "SCH.AP_BOARD.C12"
+   ],
+   "compulsory": [
+    "CIVICS",
+    "ECONOMICS",
+    "COMMERCE"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "AP_BOARD_MEC",
+   "name": "MEC",
+   "class_codes": [
+    "SCH.AP_BOARD.C11",
+    "SCH.AP_BOARD.C12"
+   ],
+   "compulsory": [
+    "MATHEMATICS",
+    "ECONOMICS",
+    "COMMERCE"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "AP_BOARD_HEC",
+   "name": "HEC",
+   "class_codes": [
+    "SCH.AP_BOARD.C11",
+    "SCH.AP_BOARD.C12"
+   ],
+   "compulsory": [
+    "HISTORY",
+    "ECONOMICS",
+    "CIVICS"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TG_BOARD_MPC",
+   "name": "MPC",
+   "class_codes": [
+    "SCH.TG_BOARD.C11",
+    "SCH.TG_BOARD.C12"
+   ],
+   "compulsory": [
+    "MATHEMATICS",
+    "PHYSICS",
+    "CHEMISTRY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TG_BOARD_BIPC",
+   "name": "BiPC",
+   "class_codes": [
+    "SCH.TG_BOARD.C11",
+    "SCH.TG_BOARD.C12"
+   ],
+   "compulsory": [
+    "BOTANY",
+    "ZOOLOGY",
+    "PHYSICS",
+    "CHEMISTRY"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TG_BOARD_CEC",
+   "name": "CEC",
+   "class_codes": [
+    "SCH.TG_BOARD.C11",
+    "SCH.TG_BOARD.C12"
+   ],
+   "compulsory": [
+    "CIVICS",
+    "ECONOMICS",
+    "COMMERCE"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TG_BOARD_MEC",
+   "name": "MEC",
+   "class_codes": [
+    "SCH.TG_BOARD.C11",
+    "SCH.TG_BOARD.C12"
+   ],
+   "compulsory": [
+    "MATHEMATICS",
+    "ECONOMICS",
+    "COMMERCE"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TG_BOARD_HEC",
+   "name": "HEC",
+   "class_codes": [
+    "SCH.TG_BOARD.C11",
+    "SCH.TG_BOARD.C12"
+   ],
+   "compulsory": [
+    "HISTORY",
+    "ECONOMICS",
+    "CIVICS"
+   ],
+   "choose": [],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "WB_BOARD_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.WB_BOARD.C11",
+    "SCH.WB_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "WB_BOARD_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.WB_BOARD.C11",
+    "SCH.WB_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "WB_BOARD_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.WB_BOARD.C11",
+    "SCH.WB_BOARD.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "WB_BOARD_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.WB_BOARD.C11",
+    "SCH.WB_BOARD.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ODISHA_BOARD_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.ODISHA_BOARD.C11",
+    "SCH.ODISHA_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ODISHA_BOARD_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.ODISHA_BOARD.C11",
+    "SCH.ODISHA_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ODISHA_BOARD_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.ODISHA_BOARD.C11",
+    "SCH.ODISHA_BOARD.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ODISHA_BOARD_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.ODISHA_BOARD.C11",
+    "SCH.ODISHA_BOARD.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ASSEB_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.ASSEB.C11",
+    "SCH.ASSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ASSEB_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.ASSEB.C11",
+    "SCH.ASSEB.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ASSEB_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.ASSEB.C11",
+    "SCH.ASSEB.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "ASSEB_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.ASSEB.C11",
+    "SCH.ASSEB.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MANIPUR_BOARD_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.MANIPUR_BOARD.C11",
+    "SCH.MANIPUR_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MANIPUR_BOARD_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.MANIPUR_BOARD.C11",
+    "SCH.MANIPUR_BOARD.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MANIPUR_BOARD_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.MANIPUR_BOARD.C11",
+    "SCH.MANIPUR_BOARD.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MANIPUR_BOARD_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.MANIPUR_BOARD.C11",
+    "SCH.MANIPUR_BOARD.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBOSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.MBOSE.C11",
+    "SCH.MBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBOSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.MBOSE.C11",
+    "SCH.MBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBOSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.MBOSE.C11",
+    "SCH.MBOSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBOSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.MBOSE.C11",
+    "SCH.MBOSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.MBSE.C11",
+    "SCH.MBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.MBSE.C11",
+    "SCH.MBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.MBSE.C11",
+    "SCH.MBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "MBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.MBSE.C11",
+    "SCH.MBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "NBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.NBSE.C11",
+    "SCH.NBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "NBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.NBSE.C11",
+    "SCH.NBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "NBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.NBSE.C11",
+    "SCH.NBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "NBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.NBSE.C11",
+    "SCH.NBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TBSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.TBSE.C11",
+    "SCH.TBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TBSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.TBSE.C11",
+    "SCH.TBSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TBSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.TBSE.C11",
+    "SCH.TBSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "TBSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.TBSE.C11",
+    "SCH.TBSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JKBOSE_SCI_PCM",
+   "name": "Science (PCM)",
+   "class_codes": [
+    "SCH.JKBOSE.C11",
+    "SCH.JKBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "MATHEMATICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "COMPUTER_SCIENCE",
+      "BIOLOGY"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JKBOSE_SCI_PCB",
+   "name": "Science (PCB)",
+   "class_codes": [
+    "SCH.JKBOSE.C11",
+    "SCH.JKBOSE.C12"
+   ],
+   "compulsory": [
+    "PHYSICS",
+    "CHEMISTRY",
+    "BIOLOGY"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "HOME_SCIENCE",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JKBOSE_COMMERCE",
+   "name": "Commerce",
+   "class_codes": [
+    "SCH.JKBOSE.C11",
+    "SCH.JKBOSE.C12"
+   ],
+   "compulsory": [
+    "ACCOUNTANCY",
+    "BUSINESS_STUDIES",
+    "ECONOMICS"
+   ],
+   "choose": [
+    {
+     "min": 0,
+     "max": 1,
+     "from": [
+      "MATHEMATICS",
+      "COMPUTER_SCIENCE"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  },
+  {
+   "code": "JKBOSE_ARTS",
+   "name": "Arts / Humanities",
+   "class_codes": [
+    "SCH.JKBOSE.C11",
+    "SCH.JKBOSE.C12"
+   ],
+   "compulsory": [],
+   "choose": [
+    {
+     "min": 3,
+     "max": 4,
+     "from": [
+      "HISTORY",
+      "GEOGRAPHY",
+      "POLITICAL_SCIENCE",
+      "ECONOMICS",
+      "SOCIOLOGY",
+      "PSYCHOLOGY",
+      "HOME_SCIENCE",
+      "PHYSICAL_EDUCATION"
+     ]
+    }
+   ],
+   "rule": "guidance",
+   "language_rule": "English plus one Indian language as per board scheme"
+  }
+ ]
+}

@@ -52,6 +52,7 @@ import { inboundModule } from './modules/inbound/index.js';
 import { adminModule } from './modules/admin/index.js';
 import { entitlementsModule } from './modules/entitlements/index.js';
 import { taxonomyModule } from './modules/taxonomy/index.js';
+import { curriculumModule } from './modules/curriculum/index.js';
 import { academicModule } from './modules/academic/index.js';
 import { admissionsModule } from './modules/admissions/index.js';
 import { transportModule } from './modules/transport/index.js';
@@ -245,6 +246,9 @@ export async function buildApp() {
         // cookies, so a server-to-server API-key call would be rejected before the
         // route's own hook ever ran.
         '/api/v1/taxonomy/',
+        // Curriculum v2 API: the same self-authenticating service-key-or-admin hook
+        // (see modules/curriculum/routes.ts). Registered only with TAXONOMY_V2_ENABLED.
+        '/api/v1/curriculum/',
     ];
     fastify.addHook('onRequest', async (request, reply) => {
         // CORS preflight carries no credentials — must pass.
@@ -385,6 +389,7 @@ export async function buildApp() {
     await fastify.register(adminModule);
     await fastify.register(entitlementsModule);
     await fastify.register(taxonomyModule);
+    await fastify.register(curriculumModule);
     await fastify.register(academicModule);
     await fastify.register(admissionsModule);
     await fastify.register(transportModule);

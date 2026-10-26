@@ -158,3 +158,109 @@ model BookTaxonomyLink {
   @@map("book_taxonomy_links")
   @@schema("taxonomy")
 }
+
+// ─── Curriculum v2: Book Buddy's education taxonomy (edu-taxonomy release) ─────────────
+//
+// The one course hierarchy all four apps share: 7,884 nodes in 7 domains, ids
+// uuid5(namespace, code) so every copy agrees with Book Buddy's. Loaded at start-up from
+// the vendored release in prisma/taxonomy/edu-taxonomy (src/modules/curriculum/loader.ts)
+// and served read-only at /api/v1/curriculum/* when TAXONOMY_V2_ENABLED=true.
+//
+// The tables are created by prisma/taxonomy/migrations/001_curriculum_v2.sql, which also
+// holds what Prisma cannot express: the structure guard trigger, the path trigger, the
+// CHECK constraints and the deferrable sibling-order rule. The old TaxonomyNode tree
+// above keeps working beside it until DigiClassroom and PDLMS have switched.
+
+/// One node of the education taxonomy. Code and id are permanent; nodes are never
+/// deleted, only made inactive.
+model CurriculumNode {
+  id               String   @id @db.Uuid
+  code             String   @unique
+  parentId         String?  @map("parent_id") @db.Uuid
+  depth            Int      @db.SmallInt
+  sortOrder        Int      @map("sort_order")
+  nodeType         String   @map("node_type")
+  segment          String
+  name             String
+  nameHi           String?  @map("name_hi")
+  canonicalSubject String?  @map("canonical_subject")
+  canonicalTopic   String?  @map("canonical_topic")
+  /// active | inactive
+  status           String   @default("active")
+  /// sourced | verify | template
+  verification     String   @default("sourced")
+  /// complete | partial | pending
+  completeness     String   @default("complete")
+  path             String
+  attrs            Json     @default("{}") @db.JsonB
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(6)
+  updatedAt        DateTime @default(now()) @map("updated_at") @db.Timestamptz(6)
+
+  parent             CurriculumNode?            @relation("CurriculumTree", fields: [parentId], references: [id], onDelete: Restrict)
+  children           CurriculumNode[]           @relation("CurriculumTree")
+  combinationClasses CurriculumCombinationClass[]
+
+  @@index([parentId])
+  @@index([nodeType])
+  @@index([canonicalSubject])
+  @@index([canonicalTopic])
+  @@map("node")
+  @@schema("taxonomy")
+}
+
+/// The node types, and which may sit under which (enforced by the guard trigger).
+model CurriculumNodeType {
+  nodeType String @id @map("node_type")
+
+  @@map("node_type")
+  @@schema("taxonomy")
+}
+
+model CurriculumAllowedChild {
+  parentType String @map("parent_type")
+  childType  String @map("child_type")
+
+  @@id([parentType, childType])
+  @@map("allowed_child")
+  @@schema("taxonomy")
+}
+
+/// Stream / subject combinations (PCM, PCB, Commerce...): data, never tree branches.
+/// Replaced whole with each release.
+model CurriculumCombination {
+  code         String   @id
+  name         String
+  rule         String   @default("guidance")
+  compulsory   String[] @default([])
+  choose       Json     @default("[]") @db.JsonB
+  languageRule String?  @map("language_rule")
+
+  classes CurriculumCombinationClass[]
+
+  @@map("combination")
+  @@schema("taxonomy")
+}
+
+model CurriculumCombinationClass {
+  combinationCode String @map("combination_code")
+  classNodeId     String @map("class_node_id") @db.Uuid
+
+  combination CurriculumCombination @relation(fields: [combinationCode], references: [code], onDelete: Cascade)
+  classNode   CurriculumNode        @relation(fields: [classNodeId], references: [id], onDelete: Restrict)
+
+  @@id([combinationCode, classNodeId])
+  @@map("combination_class")
+  @@schema("taxonomy")
+}
+
+/// Which release is loaded, so a restart with the same files does nothing. `hash` is the
+/// release hash from RELEASE.json, the same value Book Buddy records for the same files.
+model CurriculumRelease {
+  hash      String   @id
+  version   String
+  nodeCount Int      @map("node_count")
+  loadedAt  DateTime @default(now()) @map("loaded_at") @db.Timestamptz(6)
+
+  @@map("release")
+  @@schema("taxonomy")
+}

@@ -1,0 +1,2 @@
+# Hash-checked bytes: never convert line endings.
+* -text

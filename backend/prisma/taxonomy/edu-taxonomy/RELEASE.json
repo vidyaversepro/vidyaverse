@@ -1,0 +1,22 @@
+{
+  "name": "edu-taxonomy",
+  "version": "2026.10.1",
+  "released": "2026-10-26",
+  "source": "book-buddy007/bookbuddy: backend/prisma/taxonomy/generator/generate_taxonomy.py",
+  "schema_version": "1.0.0",
+  "id_namespace": "bfd0d89e-223c-53fa-8476-1b70678a5d20",
+  "id_rule": "id = uuid5(id_namespace, code)",
+  "node_count": 7884,
+  "combination_count": 122,
+  "release_hash": "265130ec1730f526d516914fc5f9cb4b315f6b02cdcc58f2383955d0637cdf6f",
+  "files": {
+    "taxonomy_nodes.csv": {
+      "sha256": "f58141af23dfd2a5c01470fda1cf5ddf5472b829e68e011ac05618d43b368d6c",
+      "bytes": 2682845
+    },
+    "combinations.json": {
+      "sha256": "c766fff18ad38d5090f17270639d7b1065f70a2a71cc4f1bb9445e0b4b9fd8d3",
+      "bytes": 54709
+    }
+  }
+}
