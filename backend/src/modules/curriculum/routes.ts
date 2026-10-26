@@ -6,13 +6,14 @@
  * are the same code as Book Buddy's own. Bodies are therefore bare (no `{ success, data }` envelope), and errors use
  * NestJS's `{ statusCode, message, error }` shape.
  *
- * Authenticated by the taxonomy service key or a Vidyaverse admin session (../taxonomy/service-auth.ts), so the
+ * Authenticated by the taxonomy service key or any Vidyaverse session (../taxonomy/service-auth.ts): the taxonomy is
+ * public reference data, and an institution's admin picks their classes' nodes from it. Read-only. So the
  * prefix is in PUBLIC_PREFIXES in src/index.ts, as for /api/v1/taxonomy/.
  */
 import { FastifyPluginAsync, FastifyReply } from 'fastify';
 import { z } from 'zod';
 import { taxonomyDb } from '../taxonomy/client.js';
-import { authenticateServiceOrAdmin } from '../taxonomy/service-auth.js';
+import { authenticateServiceOrSession } from '../taxonomy/service-auth.js';
 import { CurriculumNodeNotFoundError, CurriculumService } from './service.js';
 
 const uuid = z.string().uuid();
@@ -28,7 +29,7 @@ function notFound(err: unknown, reply: FastifyReply) {
 }
 
 const curriculumRoutes: FastifyPluginAsync<{ service?: CurriculumService }> = async (fastify, opts) => {
-    fastify.addHook('onRequest', authenticateServiceOrAdmin);
+    fastify.addHook('onRequest', authenticateServiceOrSession);
     const curriculum = opts.service ?? new CurriculumService(taxonomyDb());
 
     fastify.get('/domains', async () => curriculum.domains());

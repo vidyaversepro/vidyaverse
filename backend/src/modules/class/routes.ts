@@ -22,6 +22,11 @@ export async function routes(app: FastifyInstance) {
         preHandler: [app.authenticate, app.rbac({ roles: ['main_admin', 'school_admin'] })],
     }, controller.update);
 
+    // Set the curriculum v2 node the class teaches (and each stream's code): its students' main learning goal.
+    app.put('/:id/curriculum', {
+        preHandler: [app.authenticate, app.rbac({ roles: ['main_admin', 'school_admin'] })],
+    }, controller.setCurriculum);
+
     // Delete class
     app.delete('/:id', {
         preHandler: [app.authenticate, app.rbac({ roles: ['main_admin', 'school_admin'] })],

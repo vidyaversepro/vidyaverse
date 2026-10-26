@@ -161,6 +161,23 @@ model Institution {
 /// taxonomyNodeId is intentionally NOT a foreign key -- it lives in a different
 /// Postgres datasource, so referential integrity across them can't be enforced by
 /// Postgres and isn't attempted here.
+/// What a learner says they are studying (curriculum v2 nodes: a board's class, a programme, an exam), the same shape
+/// as Book Buddy's UserLearningGoal. One goal is primary (a partial unique index in the migration). DigiClassroom and
+/// PDLMS read and write it for federated learners through /api/v1/academic/my-learning-path.
+model LearnerGoal {
+  userId          String   @map("user_id") @db.VarChar(36)
+  nodeId          String   @map("node_id") @db.VarChar(36)
+  isPrimary       Boolean  @default(false) @map("is_primary")
+  /// The stream for a Class 11-12 goal ("CBSE_SCI_PCM"); a plain code that survives taxonomy releases.
+  combinationCode String?  @map("combination_code") @db.VarChar(60)
+  createdAt       DateTime @default(now()) @map("created_at")
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@id([userId, nodeId])
+  @@index([nodeId])
+  @@map("learner_goals")
+}
+
 model InstitutionCurriculumScope {
   id             String      @id @default(uuid()) @db.VarChar(36)
   institutionId  String      @map("institution_id") @db.VarChar(36)
@@ -300,6 +317,11 @@ model User {
   updatedAt                 DateTime                @updatedAt @map("updated_at")
   alternateEmails           Json?                   @map("alternate_emails")
   externalSubjects          Json?                   @map("external_subjects")
+  /// The language a learner studies in (ISO 639-1: en, hi...), set at onboarding. Read by DigiClassroom and PDLMS.
+  preferredMedium           String?                 @map("preferred_medium") @db.VarChar(8)
+  /// "I'm just exploring": no learning goals, and do not ask again.
+  learningPathSkippedAt     DateTime?               @map("learning_path_skipped_at")
+  learnerGoals              LearnerGoal[]
   accounts                  Account[]
   approvalRequests          ApprovalRequest[]
   approvedSteps             ApprovalStep[]
@@ -379,6 +401,9 @@ model Class {
   name                  String                  @db.VarChar(100)
   displayOrder          Int                     @default(0) @map("display_order")
   streamsEnabled        Boolean                 @default(false) @map("streams_enabled")
+  /// The curriculum v2 node this class teaches (a board's class, a programme, an exam course). Its students inherit
+  /// it as their main learning goal. A plain uuid: the taxonomy lives in the trio database.
+  curriculumNodeId      String?                 @map("curriculum_node_id") @db.VarChar(36)
   createdAt             DateTime                @default(now()) @map("created_at")
   updatedAt             DateTime                @updatedAt @map("updated_at")
   attendanceSessions    AttendanceSession[]
@@ -404,6 +429,8 @@ model Stream {
   name          String      @db.VarChar(100)
   description   String?     @db.Text
   displayOrder  Int         @default(0) @map("display_order")
+  /// The curriculum v2 stream this is ("CBSE_SCI_PCM"), for the class's node. Students in its sections inherit it.
+  combinationCode String?   @map("combination_code") @db.VarChar(60)
   createdAt     DateTime    @default(now()) @map("created_at")
   updatedAt     DateTime    @updatedAt @map("updated_at")
   sections      Section[]

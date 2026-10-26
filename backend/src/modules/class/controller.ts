@@ -9,6 +9,7 @@ function getService(request: FastifyRequest) {
     return createClassService();
 }
 import { NotFoundError } from '../../utils/errors.js';
+import { setClassCurriculum } from '../academic/learning-path-service.js';
 
 export const controller = {
     async list(request: FastifyRequest, reply: FastifyReply) {
@@ -46,6 +47,12 @@ export const controller = {
         const { id } = request.params as { id: string };
         const body = request.body as Record<string, any>;
         const data = await getService(request).update(id, body);
+        return reply.send({ success: true, data });
+    },
+
+    async setCurriculum(request: FastifyRequest, reply: FastifyReply) {
+        const { id } = request.params as { id: string };
+        const data = await setClassCurriculum(request.institutionId ?? undefined, id, request.body);
         return reply.send({ success: true, data });
     },
 

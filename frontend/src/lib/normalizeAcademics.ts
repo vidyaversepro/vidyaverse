@@ -2,6 +2,8 @@ export interface FlatClass {
     id: string;
     name: string;
     streamsEnabled: boolean;
+    /** The curriculum v2 node the class teaches (its students' main learning goal). */
+    curriculumNodeId?: string | null;
     _count?: { streams: number; sections: number; students: number };
 }
 
@@ -9,6 +11,8 @@ export interface FlatStream {
     id: string;
     classId: string;
     name: string;
+    /** The curriculum v2 stream code ("CBSE_SCI_PCM") for the class's node. */
+    combinationCode?: string | null;
     _count?: { sections: number };
 }
 

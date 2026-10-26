@@ -21,33 +21,41 @@ import { env } from '../../config/env.js';
 const SUPER_ROLES = ['super_admin', 'admin'];
 const API_KEY_HEADER = 'x-taxonomy-api-key';
 
-export async function authenticateServiceOrAdmin(
-    request: FastifyRequest,
-    reply: FastifyReply,
-): Promise<void> {
-    const presented = request.headers[API_KEY_HEADER];
-    const key = Array.isArray(presented) ? presented[0] : presented;
+/** The service key, or a Vidyaverse session holding one of `roles` (any signed-in user when `roles` is null). */
+function authenticateServiceOr(roles: string[] | null) {
+    return async function authenticate(request: FastifyRequest, reply: FastifyReply): Promise<void> {
+        const presented = request.headers[API_KEY_HEADER];
+        const key = Array.isArray(presented) ? presented[0] : presented;
 
-    if (key) {
-        if (!env.TAXONOMY_SERVICE_API_KEY) {
-            return reply.status(503).send({
-                success: false,
-                error: 'Taxonomy service API key is not configured on this deployment.',
-            });
+        if (key) {
+            if (!env.TAXONOMY_SERVICE_API_KEY) {
+                return reply.status(503).send({
+                    success: false,
+                    error: 'Taxonomy service API key is not configured on this deployment.',
+                });
+            }
+            if (key !== env.TAXONOMY_SERVICE_API_KEY) {
+                return reply.status(401).send({ success: false, error: 'Invalid taxonomy service API key' });
+            }
+            // No per-user identity to attach — this is a service-to-service call.
+            return;
         }
-        if (key !== env.TAXONOMY_SERVICE_API_KEY) {
-            return reply.status(401).send({ success: false, error: 'Invalid taxonomy service API key' });
-        }
-        // No per-user identity to attach — this is a service-to-service call.
-        return;
-    }
 
-    // No API key presented — fall back to a normal admin session.
-    const server = request.server as unknown as {
-        authenticate: (req: FastifyRequest, rep: FastifyReply) => Promise<void>;
-        requireRole: (roles: string[]) => (req: FastifyRequest, rep: FastifyReply) => Promise<void>;
+        // No API key presented — fall back to a normal admin session.
+        const server = request.server as unknown as {
+            authenticate: (req: FastifyRequest, rep: FastifyReply) => Promise<void>;
+            requireRole: (roles: string[]) => (req: FastifyRequest, rep: FastifyReply) => Promise<void>;
     };
     await server.authenticate(request, reply);
-    if (reply.sent) return;
-    await server.requireRole(SUPER_ROLES)(request, reply);
+    if (reply.sent || !roles) return;
+    await server.requireRole(roles)(request, reply);
+    };
 }
+
+export const authenticateServiceOrAdmin = authenticateServiceOr(SUPER_ROLES);
+
+/**
+ * For curriculum v2 reads only: the education taxonomy is public reference data (boards, classes, exams), and an
+ * institution's own admin needs it to say which class their class is. Any signed-in Vidyaverse user, or the key.
+ */
+export const authenticateServiceOrSession = authenticateServiceOr(null);

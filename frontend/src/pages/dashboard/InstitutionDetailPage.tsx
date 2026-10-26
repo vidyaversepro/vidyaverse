@@ -67,6 +67,7 @@ import {
     useTeachers,
 } from '@/lib/queries';
 import { normalizeAcademics, NormalizedClass, NormalizedStream, NormalizedSection } from '@/lib/normalizeAcademics';
+import { ClassCurriculumPanel } from '@/components/institutions/ClassCurriculumPanel';
 import { cn } from '@/lib/utils';
 import { Switch } from '@/components/ui/switch';
 import { api } from '@/lib/api';
@@ -625,6 +626,8 @@ function AcademicsTab({ institutionId }: { institutionId: string }) {
                     </div>
                 )}
             </div>
+
+            {selectedClass && <ClassCurriculumPanel institutionId={institutionId} cls={selectedClass} />}
 
             {/* THREE CARD LAYOUT */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:h-[600px]">
