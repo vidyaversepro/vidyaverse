@@ -9,6 +9,8 @@
  */
 import { FastifyPluginAsync } from 'fastify';
 import { z } from 'zod';
+import { logger } from '../../utils/logger.js';
+import { expandScope, scopeExpansionAvailable } from '../curriculum/scope-expansion.js';
 import { authenticateSessionOrToken } from '../entitlements/capabilities/bearer-auth.js';
 import {
     getInstitutionScope,
@@ -39,7 +41,19 @@ const curriculumScopeRoutes: FastifyPluginAsync = async (fastify) => {
         if (!userId) {
             return reply.status(401).send({ success: false, error: 'Not authenticated' });
         }
-        const scopeNodeIds = await getScopeNodeIdsForUser(userId);
+        let scopeNodeIds = await getScopeNodeIdsForUser(userId);
+        // `?expand=descendants` (PDLMS, with curriculum v2 on) asks for each scope node plus everything below it.
+        // Without the parameter, or with v2 off here, the scope is returned as stored, as DigiClassroom reads it.
+        const { expand } = request.query as { expand?: string };
+        if (expand === 'descendants' && scopeNodeIds.length > 0 && scopeExpansionAvailable()) {
+            try {
+                scopeNodeIds = await expandScope(scopeNodeIds);
+            } catch (err) {
+                // Fail open like the rest of this endpoint: the stored ids alone would hide books tagged below them.
+                logger.warn(`[curriculum-scope] could not expand scope for ${userId}, returning no scope: ${(err as Error).message}`);
+                scopeNodeIds = [];
+            }
+        }
         return reply.send({ success: true, data: { scopeNodeIds } });
     });
 

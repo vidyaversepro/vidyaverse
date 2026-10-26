@@ -111,6 +111,23 @@ export class CurriculumService {
         return rows.map((r) => r.combination).sort((a, b) => a.name.localeCompare(b.name));
     }
 
+    /**
+     * The given ids plus every node below them (code prefix: SCH.CBSE.C9 covers SCH.CBSE.C9.SCIENCE), inactive ones
+     * included since a book may still be tagged there. An id that is not in the tree stays in the list unchanged,
+     * so a scope that still holds old-tree ids keeps matching what was tagged with them.
+     */
+    async withDescendants(ids: string[]): Promise<string[]> {
+        const unique = [...new Set(ids)];
+        if (!unique.length) return [];
+        const roots = await this.db.curriculumNode.findMany({ where: { id: { in: unique } }, select: { code: true } });
+        if (!roots.length) return unique;
+        const below = await this.db.curriculumNode.findMany({
+            where: { OR: roots.map((r) => ({ code: { startsWith: `${r.code}.` } })) },
+            select: { id: true },
+        });
+        return [...new Set([...unique, ...below.map((r) => r.id)])];
+    }
+
     /** Name search in English or Hindi, optionally inside one domain or among some node types. */
     async search(query: string, opts: { domain?: string; types?: string[]; limit?: number } = {}): Promise<NodeDto[]> {
         const q = (query ?? '').trim();

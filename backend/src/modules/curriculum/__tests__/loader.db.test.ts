@@ -145,6 +145,30 @@ describe.skipIf(!URL)('curriculum v2 against Postgres', () => {
         expect(await db.curriculumNode.findUnique({ where: { code: branch }, select: { status: true } })).toEqual({ status: 'active' });
     }, 120_000);
 
+    describe('withDescendants (institute scope)', () => {
+        const idOf = async (code: string) => (await db.curriculumNode.findUniqueOrThrow({ where: { code }, select: { id: true } })).id;
+
+        it('adds every node below a class and nothing from its neighbours', async () => {
+            const service = new CurriculumService(db);
+            const class9 = await idOf('SCH.CBSE.C9');
+            const got = await service.withDescendants([class9]);
+            const below = await db.curriculumNode.findMany({ where: { code: { startsWith: 'SCH.CBSE.C9.' } }, select: { id: true } });
+            expect(below.length).toBe(13);
+            expect([...got].sort()).toEqual([class9, ...below.map((r) => r.id)].sort());
+            expect(got).not.toContain(await idOf('SCH.CBSE.C10'));
+            expect(got).not.toContain(await idOf('SCH.CBSE'));
+        });
+
+        it('takes a leaf as it is, keeps an id that is not in the tree, and answers [] for none', async () => {
+            const service = new CurriculumService(db);
+            const leaf = await idOf('SCH.CBSE.C9.ENGLISH');
+            const oldTreeId = 'c17fffc8-df25-441d-9285-36e722f2d8ca';
+            expect(await service.withDescendants([leaf, oldTreeId, leaf])).toEqual([leaf, oldTreeId]);
+            expect(await service.withDescendants([oldTreeId])).toEqual([oldTreeId]);
+            expect(await service.withDescendants([])).toEqual([]);
+        });
+    });
+
     describe('HTTP API', () => {
         const get = (url: string, key: string | null = KEY) =>
             app.inject({ method: 'GET', url: `/api/v1/curriculum${url}`, headers: key ? { 'x-taxonomy-api-key': key } : {} });
