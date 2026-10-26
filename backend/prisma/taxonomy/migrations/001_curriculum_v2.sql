@@ -198,6 +198,9 @@ DECLARE
     r TEXT;
 BEGIN
     IF EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'taxonomy_app') THEN
+        -- In production taxonomy_app owns the schema already. Where it does not (a fresh database, where this file
+        -- created the schema), an owner without USAGE fails every foreign-key check, which runs as the table owner.
+        GRANT USAGE ON SCHEMA taxonomy TO taxonomy_app;
         FOREACH t IN ARRAY ARRAY['node_type', 'allowed_child', 'node', 'combination', 'combination_class', 'release'] LOOP
             EXECUTE format('ALTER TABLE taxonomy.%I OWNER TO taxonomy_app', t);
         END LOOP;

@@ -52,7 +52,13 @@ describe.skipIf(!URL)('curriculum v2 against Postgres', () => {
 
     beforeAll(async () => {
         const reset = join(mkdtempSync(join(tmpdir(), 'curriculum-reset-')), 'reset.sql');
-        writeFileSync(reset, 'DROP SCHEMA IF EXISTS taxonomy CASCADE;\n');
+        // taxonomy_app exists in production and the migration hands it the tables; without the role here the
+        // ownership half of the migration would never run (a missing schema grant once hid behind that).
+        writeFileSync(
+            reset,
+            'DROP SCHEMA IF EXISTS taxonomy CASCADE;\n' +
+                "DO $$ BEGIN IF NOT EXISTS (SELECT 1 FROM pg_roles WHERE rolname = 'taxonomy_app') THEN CREATE ROLE taxonomy_app NOLOGIN; END IF; END $$;\n",
+        );
         dbExecute(reset);
         dbExecute(MIGRATION);
 
