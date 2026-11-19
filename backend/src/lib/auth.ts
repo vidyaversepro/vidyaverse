@@ -82,7 +82,12 @@ const baseConfig = {
     },
     user: {
         additionalFields: {
-            globalRole: { type: 'string' as const, returned: true },
+            // SECURITY: never settable by the client. better-auth accepts an
+            // additional field in /sign-up/email and /update-user unless it says
+            // `input: false`, and 'admin' passes every platform-admin gate
+            // (SUPER_ROLES). New accounts take the column default ('student');
+            // roles change only through the app's own admin routes.
+            globalRole: { type: 'string' as const, returned: true, input: false, required: false },
         },
     },
     advanced: {

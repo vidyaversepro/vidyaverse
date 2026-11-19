@@ -90,7 +90,6 @@ export const createTestUser = async (institutionId: string, role = 'school_admin
                 email,
                 password,
                 name: 'Test User',
-                globalRole: role === 'super_admin' ? 'super_admin' : 'user'
             }
         });
 
@@ -103,6 +102,8 @@ export const createTestUser = async (institutionId: string, role = 'school_admin
         return prisma.user.update({
             where: { id: res.user.id },
             data: {
+                // Sign-up can no longer set it (lib/auth.ts, input: false).
+                globalRole: role === 'super_admin' ? 'super_admin' : 'user',
                 isActive: true,
                 institutionRoles: {
                     create: {
