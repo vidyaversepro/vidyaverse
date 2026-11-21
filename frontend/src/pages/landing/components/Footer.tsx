@@ -80,7 +80,7 @@ export default function Footer() {
                                 <MapPin className="h-4 w-4 mt-0.5 shrink-0" style={{ color: 'var(--accent-primary)' }} />
                                 <span className="leading-tight">
                                     Vinstitution, 2nd Floor, Property No. 44, Regal Building,
-                                    Connaught Place, New Delhi — 110090
+                                    Connaught Place, New Delhi — 110001
                                 </span>
                             </li>
                         </ul>
